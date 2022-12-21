@@ -33,7 +33,7 @@ nav_link.forEach(link => {
 const loader = document.querySelector(".lds-ring");
 
 /* Alert when sending email */
-const url = "http://localhost:3000/send-email"
+//const url = "http://localhost:3000/send-email"
 const name = document.getElementById("name");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
@@ -45,7 +45,7 @@ form.addEventListener('submit', async (e) => {
     loader.style.display = "block"
     sendEmailButton.disabled = true
     try {
-        const response = await fetch('https://portfolio-email-sender-production.up.railway.app', {
+        const response = await fetch('https://portfolio-email-sender-production.up.railway.app/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -70,9 +70,9 @@ form.addEventListener('submit', async (e) => {
 
     } catch (error) {
         console.log(error.message)
+
     }
     location.reload()
-
 
 })
 
