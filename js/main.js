@@ -45,7 +45,7 @@ form.addEventListener('submit', async (e) => {
     loader.style.display = "block"
     sendEmailButton.disabled = true
     try {
-        const response = await fetch('https://portf-email.herokuapp.com/send-email', {
+        const response = await fetch('https://portfolio-email-sender-production.up.railway.app', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
