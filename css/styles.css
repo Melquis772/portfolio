@@ -397,6 +397,10 @@ background-color: var(--body-color);
     color: var(--text-color-light);
 }
 
+a.contact_subtitle{
+    text-decoration: none;
+}
+
 .contact_content{
     background-color: var(--input-color);
     border-radius: .5rem;
